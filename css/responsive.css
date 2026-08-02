@@ -1,0 +1,28 @@
+@media (max-width: 991.98px) {
+  .navbar { background: rgba(252, 251, 248, .94); backdrop-filter: blur(10px); padding: .9rem 0; }
+  .navbar-collapse { padding: 1rem 0; }
+  .nav-link { padding: .7rem 0 !important; }
+  .hero-media { padding: 1.5rem 0 3rem; }
+  .hero-content .row { padding-top: 6rem; }
+  .section-space { padding: 5.5rem 0; }
+  .contact-shell { padding: 2rem; }
+  .section-heading.split { align-items: start; flex-direction: column; gap: 1rem; }
+  .craft-image img { height: 27rem; }
+  .product-image { height: 25rem; }
+  .cursor-glow { display: none; }
+}
+
+@media (max-width: 575.98px) {
+  h1 { font-size: 3.15rem; }
+  h2 { font-size: 2.7rem; }
+  .hero-copy { font-size: .95rem; }
+  .image-reveal img { height: 22rem; }
+  .trust-line span { margin: 0 .18rem; }
+  .product-image { height: 20rem; }
+  .collection-art { height: 21rem; }
+  .craft-image img { height: 21rem; }
+  .testimonial-card { padding: 2rem; }
+  .testimonial-card p { font-size: 1.45rem; }
+  .contact-shell { margin: 0 -12px; }
+  .site-footer { padding-top: 4rem; }
+}

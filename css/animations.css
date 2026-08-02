@@ -1,0 +1,33 @@
+@keyframes float{50%{transform:translateY(-14px)}}@keyframes pulse{50%{opacity:.4;transform:scale(1.08)}}.orb-one{animation:float 11s ease-in-out infinite}.orb-two{animation:float 8s ease-in-out infinite reverse}.hero-glow,.story-orb{animation:pulse 14s ease-in-out infinite}.image-reveal:after{content:"";position:absolute;inset:0;background:var(--ivory);transform:translateX(100%);animation:reveal 1.15s .25s cubic-bezier(.77,0,.18,1) forwards}@keyframes reveal{to{transform:translateX(-101%)}}.magnetic{will-change:transform}.nav-link{position:relative}.nav-link:after{content:"";position:absolute;right:1rem;left:1rem;bottom:.25rem;height:1px;background:var(--gold);transform:scaleX(0);transition:transform .25s}.nav-link:hover:after{transform:scaleX(1)}@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.orb-one,.orb-two,.hero-glow,.story-orb,.image-reveal:after{animation:none}.image-reveal:after{display:none}*,*:before,*:after{transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}}
+
+/* Local animation layer: visible even before JavaScript libraries initialize */
+@keyframes heroTitleIn{from{opacity:0;transform:translateY(38px)}to{opacity:1;transform:none}}
+@keyframes heroImageIn{from{opacity:0;transform:scale(1.08) translateX(-28px)}to{opacity:1;transform:none}}
+@keyframes goldSweep{0%{transform:translateX(-140%) skewX(-16deg)}55%,100%{transform:translateX(220%) skewX(-16deg)}}
+.hero h1{animation:heroTitleIn 1s .12s both cubic-bezier(.2,.75,.2,1)}
+.hero-copy,.hero .d-flex,.trust-line{animation:heroTitleIn .9s .32s both cubic-bezier(.2,.75,.2,1)}
+.hero-media img{animation:heroImageIn 1.25s .12s both cubic-bezier(.2,.75,.2,1)}
+.product-image:after,.collection-art:after{content:"";position:absolute;inset:-25%;background:linear-gradient(105deg,transparent 42%,rgba(255,255,255,.32) 50%,transparent 58%);transform:translateX(-140%) skewX(-16deg);pointer-events:none}
+.product-card:hover .product-image:after,.collection-card:hover .collection-art:after{animation:goldSweep 1.2s ease-out}
+.collection-art{display:block;position:relative;background:var(--taupe)}
+.collection-art img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.collection-card:hover .collection-art img{transform:scale(1.055)}
+.product-image{height:23rem}
+.product-image img{transition:transform .65s cubic-bezier(.2,.7,.2,1)}
+.product-card:hover .product-image img{transform:scale(1.05)}
+.icon-btn{transition:transform .25s ease,background-color .25s ease}
+.icon-btn:hover{background:var(--gold);transform:scale(1.08)}
+.craft-image{position:relative;margin:0;border:1px solid rgba(198,161,91,.35);overflow:hidden}
+.craft-image img{width:100%;height:34rem;object-fit:cover;display:block;transition:transform 1s ease}
+.craft-image:hover img{transform:scale(1.035)}
+.craft-image figcaption{position:absolute;right:1.2rem;bottom:1.2rem;background:rgba(23,22,21,.7);backdrop-filter:blur(10px);padding:.7rem 1rem;color:var(--ivory);font-size:.7rem}
+.craft-image figcaption i{color:var(--gold);margin-left:.35rem}
+.site-header{transition:background-color .35s ease,box-shadow .35s ease,transform .35s ease}
+.site-header.scrolled{position:fixed;background:rgba(252,251,248,.9);backdrop-filter:blur(14px);box-shadow:0 8px 30px rgba(23,22,21,.06)}
+.site-header.scrolled .navbar{padding:.75rem 0}
+.cursor-glow{position:fixed;width:18rem;height:18rem;border-radius:50%;pointer-events:none;z-index:0;background:radial-gradient(circle,rgba(198,161,91,.13),transparent 68%);transform:translate(-50%,-50%);opacity:0;transition:opacity .35s}
+.cursor-glow.visible{opacity:1}
+.js-reveal{opacity:0;transform:translateY(34px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.75,.2,1)}
+.js-reveal.in-view{opacity:1;transform:none}
+
+@media (prefers-reduced-motion:reduce){.hero h1,.hero-copy,.hero .d-flex,.trust-line,.hero-media img{animation:none}.js-reveal{opacity:1;transform:none}}
